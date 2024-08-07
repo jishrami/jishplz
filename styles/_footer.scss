@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+    background-color: #f1f7ed;
+    color: #020202;
+    padding: .5em;
+    border-radius: 1em;
+    box-shadow: #91c7b1 0px 0px 10px;
+    margin: 1em;
+    position: relative;
+
+    .footer__top {
+        position: absolute;
+        bottom: .25em;
+        color: #020202;
+        background-color: #f1f7ed;
+        border: none;
+        text-decoration: underline;
+    }
+}

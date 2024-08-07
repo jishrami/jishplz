@@ -1,0 +1,12 @@
+@use "_header.scss";
+@use "_main.scss";
+@use "_footer.scss";
+
+* {
+    font-family: "Libre Franklin", "Roboto", sans-serif;
+}
+
+#resume:target {
+    background-color: #faa14170;
+    width: fit-content;
+}

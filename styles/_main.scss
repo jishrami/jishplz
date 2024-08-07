@@ -1,0 +1,59 @@
+main {
+    background-color: #f1f7ed;
+    border-radius: 1em;
+    box-shadow: #91c7b1 0px 0px 10px;
+    color: #020202;
+    padding: 1em;
+    margin: 1em;
+
+    a {
+        color: #020202;
+    }
+
+    section {
+        border: #91c7b1 1px solid;
+        border-radius: .75em;
+        padding: .5em;
+        margin-bottom: 1em;
+    }
+
+    .about__personal {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .about__personal__title {
+        grid-row: 1 / span 1;
+    }
+
+    #wedding-img {
+        width: 90%;
+        max-width: fit-content;
+        border-radius: .75em;
+        align-self: center;
+        justify-self: center;
+        grid-column: 1 / -1;
+        grid-row: 2 / span 1;
+    }
+
+    .cats {
+        grid-column: span 1;
+        grid-row: 4 / span 1;
+        width: 99%;
+        max-width: 250px;
+        border-radius: .75em;
+        justify-self: center;
+        align-self: center;
+    }
+
+    #cats-desc {
+        grid-row: 5 / span 1;
+        grid-column: 1 / -1;
+    }
+
+    #wedding-desc {
+        grid-row: 3 / span 1;
+        grid-column: 1 / -1;
+    }
+
+}
