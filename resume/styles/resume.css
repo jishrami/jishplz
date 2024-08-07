@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  padding: 0 1rem 1rem 1rem;
+  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 60%;
+  }
+}
+
+header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+header h1 {
+  border-bottom: 2px solid black;
+  width: 100%;
+  margin: 0.5em auto;
+  text-align: center;
+}
+header nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid black;
+  font-size: 1rem;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+header a:nth-of-type(2):before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: black;
+  margin: 0 1em;
+}
+header a:nth-of-type(2):after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: black;
+  margin: 0 1em;
+}
+
+main .education {
+  border-bottom: 2px solid black;
+}
+main .education .education__title {
+  width: 100%;
+  margin: 0.5em auto;
+  text-align: left;
+}
+main .education .education__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+main .education .education__info p {
+  margin: 0;
+  padding: 0;
+}
+main .education .education__list {
+  text-align: left;
+  margin: 0 0 1em 1em;
+  padding-left: 1em;
+  list-style-type: circle;
+}
+main .certificates {
+  border-bottom: 2px solid black;
+}
+main .certificates .certificates__title {
+  width: 100%;
+  margin: 0.5em auto;
+  text-align: left;
+}
+main .certificates .certificates__list {
+  columns: 3;
+  text-align: left;
+  margin: 0 0 1em 1em;
+  padding-left: 1em;
+  list-style-type: circle;
+}
+main .certificates .certificates__list a {
+  color: black;
+}
+main .skills {
+  border-bottom: 2px solid black;
+}
+main .skills .skills__title {
+  width: 100%;
+  margin: 0.5em auto;
+  text-align: left;
+}
+main .skills .skills__list {
+  columns: 3;
+  text-align: left;
+  margin: 0 0 1em 1em;
+  padding-left: 1em;
+  list-style-type: circle;
+}
+main .experience {
+  border-bottom: 2px solid black;
+}
+main .experience .experience__title {
+  width: 100%;
+  margin: 0.5em 0 0 0;
+  text-align: left;
+}
+main .experience .experience__list {
+  list-style-type: circle;
+  padding: 0 0 1em 1em;
+}
+main .experience .experience__list .experience__list__item {
+  width: 100%;
+}
+main .experience .experience__list .experience__list__item li {
+  width: 100%;
+  margin: 0 0 0 1em;
+  padding: 0;
+}
+main .experience .experience__list .experience__list__item__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+  margin: 0;
+  padding: 0;
+}
+main .experience .experience__list .experience__list__item__info h3 {
+  margin: 0.5em 0 0 0;
+  padding: 0;
+}
+main .experience .experience__list .experience__list__item__company {
+  font-style: italic;
+}
+main .experience .experience__list .experience__list__item__date {
+  text-align: right;
+}
+main .projects {
+  border-bottom: 2px solid black;
+}
+main .projects .projects__title {
+  width: 100%;
+  margin: 0.5em auto;
+  text-align: left;
+}
+main .projects .projects__list {
+  list-style-type: circle;
+  text-align: left;
+  margin: 0 0 0 1em;
+  padding-left: 1em;
+}
+main .projects .projects__list li {
+  padding: 0 0 1em 1em;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+}
+footer a {
+  color: black;
+}
+
+/*# sourceMappingURL=resume.css.map */

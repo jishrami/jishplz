@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0 1rem 1rem 1rem;
+    margin: 0 auto;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        max-width: 60%;
+    }
+}
+
+header {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    h1 {
+        border-bottom: 2px solid black;
+        width: 100%;
+        margin: .5em auto;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-bottom: 2px solid black;
+        font-size: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:nth-of-type(2):before {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 1em;
+        background-color: black;
+        margin: 0 1em;
+    }
+
+    a:nth-of-type(2):after {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 1em;
+        background-color: black;
+        margin: 0 1em;
+    }
+
+}
+
+main {
+    .education {
+        border-bottom: 2px solid black;
+
+        .education__title {
+            width: 100%;
+            margin: .5em auto;
+            text-align: left;
+        }
+
+        .education__info {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .education__list {
+            text-align: left;
+            margin: 0 0 1em 1em;
+            padding-left: 1em;
+            list-style-type: circle;
+        }
+    }
+
+    .certificates {
+        border-bottom: 2px solid black;
+
+        .certificates__title {
+            width: 100%;
+            margin: .5em auto;
+            text-align: left;
+        }
+
+        .certificates__list {
+            columns: 3;
+            text-align: left;
+            margin: 0 0 1em 1em;
+            padding-left: 1em;
+            list-style-type: circle;
+
+            a {
+                color: black;
+            }
+        }
+    }
+
+    .skills {
+        border-bottom: 2px solid black;
+
+        .skills__title {
+            width: 100%;
+            margin: .5em auto;
+            text-align: left;
+        }
+
+        .skills__list {
+            columns: 3;
+            text-align: left;
+            margin: 0 0 1em 1em;
+            padding-left: 1em;
+            list-style-type: circle;
+        }
+    }
+
+    .experience {
+        border-bottom: 2px solid black;
+
+        .experience__title {
+            width: 100%;
+            margin: .5em 0 0 0;
+            text-align: left;
+        }
+
+        .experience__list {
+            list-style-type: circle;
+            padding: 0 0 1em 1em;
+
+            .experience__list__item {
+                width: 100%;
+
+                li {
+                    width: 100%;
+                    margin: 0 0 0 1em;
+                    padding: 0;
+                }
+            }
+
+            .experience__list__item__info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid black;
+                margin: 0;
+                padding: 0;
+
+                h3 {
+                    margin: .5em 0 0 0;
+                    padding: 0;
+                }
+            }
+
+            .experience__list__item__company {
+                font-style: italic;
+            }
+
+            .experience__list__item__date {
+                text-align: right;
+            }
+        }
+    }
+
+    .projects {
+        border-bottom: 2px solid black;
+
+        .projects__title {
+            width: 100%;
+            margin: .5em auto;
+            text-align: left;
+        }
+
+        .projects__list {
+            list-style-type: circle;
+            text-align: left;
+            margin: 0 0 0 1em;
+            padding-left: 1em;
+
+            li {
+                padding: 0 0 1em 1em;
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+
+    a {
+        color: black;
+    }
+}
