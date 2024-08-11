@@ -1,21 +1,31 @@
-name: Deploy to S3
+name: Assume IAM Role
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
+
+env:
+  AWS_REGION: us-west-2
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
-  deploy-to-s3:
+  AssumeRole:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-      - uses: aws-actions/configure-aws-credentials@v3
-        with:
-          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ secrets.ROLE_TO_ASSUME }}
-          aws-region: us-west-2
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Sync files to S3
-        run: aws s3 sync . s3://www.jishrami.com --delete
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v3
+      with:
+        aws-region: ${{ env.AWS_REGION }}
+        role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ secrets.ROLE_TO_ASSUME }}
+        role-session-name: GitHubActions
+
+    - name: Verify IAM Role
+      run: |
+        aws sts get-caller-identity
