@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  AWS_REGION: us-west-2
+  AWS_REGION: "us-west-2"
 
 permissions:
   id-token: write
@@ -23,8 +23,8 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v3
       with:
         aws-region: ${{ env.AWS_REGION }}
-        role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ secrets.ROLE_TO_ASSUME }}
-        role-session-name: GitHubActions
+        role-to-assume: arn:aws:iam::156479884703:role/GitHubActions
+        role-session-name: GitHub_to_AWS_via_FederatedOIDC
 
     - name: Verify IAM Role
       run: |
