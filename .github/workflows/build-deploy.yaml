@@ -7,6 +7,7 @@ on:
 
 env:
   AWS_REGION: "us-west-2"
+  BUCKET_NAME: "www.jishrami.com"
 
 permissions:
   id-token: write
@@ -23,8 +24,12 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v3
       with:
         aws-region: ${{ env.AWS_REGION }}
-        role-to-assume: arn:aws:iam::156479884703:role/GitHubActions
+        role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ secrets.ROLE_TO_ASSUME }}
         role-session-name: GitHub_to_AWS_via_FederatedOIDC
+
+    - name: Sync S3
+      run: |
+        aws s3 sync . s3://${BUCKET_NAME} --delete
 
     - name: Verify IAM Role
       run: |
