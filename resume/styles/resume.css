@@ -129,7 +129,7 @@ main .experience .experience__list .experience__list__item {
   width: 100%;
 }
 main .experience .experience__list .experience__list__item li {
-  width: 100%;
+  width: 90%;
   margin: 0 0 0 1em;
   padding: 0;
 }
@@ -171,7 +171,8 @@ main .projects .projects__list li {
 
 footer {
   position: absolute;
-  width: 100%;
+  width: 90%;
+  max-width: 500px;
 }
 footer a {
   color: black;

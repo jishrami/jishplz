@@ -148,7 +148,7 @@ main {
                 width: 100%;
 
                 li {
-                    width: 100%;
+                    width: 90%;
                     margin: 0 0 0 1em;
                     padding: 0;
                 }
@@ -202,7 +202,8 @@ main {
 
 footer {
     position: absolute;
-    width: 100%;
+    width: 90%;
+    max-width: 500px;
 
     a {
         color: black;
