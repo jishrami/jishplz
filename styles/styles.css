@@ -45,6 +45,17 @@ main section {
   padding: 0.5em;
   margin-bottom: 1em;
 }
+main .aboutme {
+  display: flex;
+  flex-flow: column;
+}
+main .aboutme #headshot-img {
+  width: 90%;
+  max-width: fit-content;
+  border-radius: 0.75em;
+  align-self: center;
+  justify-self: center;
+}
 main .about__personal {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -78,7 +89,25 @@ main #wedding-desc {
   grid-row: 3/span 1;
   grid-column: 1/-1;
 }
+main img {
+  min-width: 50px;
+}
 
+@media screen and (min-width: 768px) {
+  main .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .aboutme #headshot-img {
+    align-self: baseline;
+  }
+  main .aboutme p {
+    width: 90%;
+  }
+  main #wedding-img {
+    justify-self: baseline;
+  }
+}
 footer {
   display: flex;
   align-items: start;
@@ -108,6 +137,7 @@ footer .footer__top {
 #resume:target {
   background-color: rgba(250, 161, 65, 0.4392156863);
   width: fit-content;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */
