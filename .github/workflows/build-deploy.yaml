@@ -31,6 +31,12 @@ jobs:
         run: |
           aws s3 sync . s3://${BUCKET_NAME} --exclude ".git/*" --exclude ".github/*" --delete
 
+      - name: Invalidate CloudFront Cache for www.jishrami.com
+        run: |
+          for dist_id in ${{ secrets.CF_DIST_ID }} ${{ secrets.CF_DIST_ID2 }}; do
+            aws cloudfront create-invalidation --distribution-id ${dist_id} --paths "/*"
+          done
+
       - name: Verify IAM Role
         run: |
           aws sts get-caller-identity
