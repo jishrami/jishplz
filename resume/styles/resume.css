@@ -156,17 +156,41 @@ main .projects {
 }
 main .projects .projects__title {
   width: 100%;
-  margin: 0.5em auto;
+  margin: 0.5em 0 0 0;
   text-align: left;
 }
 main .projects .projects__list {
   list-style-type: circle;
-  text-align: left;
-  margin: 0 0 0 1em;
-  padding-left: 1em;
-}
-main .projects .projects__list li {
   padding: 0 0 1em 1em;
+}
+main .projects .projects__list .projects__list__item {
+  width: 100%;
+}
+main .projects .projects__list .projects__list__item li {
+  width: 90%;
+  margin: 0 0 0 1em;
+  padding: 0;
+}
+main .projects .projects__list .projects__list__item__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+  margin: 0;
+  padding: 0;
+}
+main .projects .projects__list .projects__list__item__info h3 {
+  margin: 0.5em 0 0 0;
+  padding: 0;
+}
+main .projects .projects__list .projects__list__item__info a {
+  color: black;
+}
+main .projects .projects__list .projects__list__item__role {
+  font-style: italic;
+}
+main .projects .projects__list .projects__list__item__date {
+  text-align: right;
 }
 
 footer {
