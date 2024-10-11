@@ -69,8 +69,19 @@ main {
     grid-column: 1 / -1;
   }
 
-  img{
+  img {
     min-width: 50px;
+  }
+
+  .projects__resume__description__link {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+
+    a {
+      font-weight: bold;
+    }
   }
 }
 
@@ -79,21 +90,25 @@ main {
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
-
     }
-    
-    .aboutme {
-        #headshot-img {
-            align-self: baseline;
-        }
 
-        p {
-            width: 90%;
-        }
+    .aboutme {
+      #headshot-img {
+        align-self: baseline;
+      }
+
+      p {
+        width: 90%;
+      }
     }
 
     #wedding-img {
-        justify-self: baseline;
+      justify-self: baseline;
+    }
+
+    .projects__resume__description__link {
+      display: flex;
+      align-items: start;
     }
   }
 }

@@ -92,6 +92,15 @@ main #wedding-desc {
 main img {
   min-width: 50px;
 }
+main .projects__resume__description__link {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+main .projects__resume__description__link a {
+  font-weight: bold;
+}
 
 @media screen and (min-width: 768px) {
   main .about {
@@ -106,6 +115,10 @@ main img {
   }
   main #wedding-img {
     justify-self: baseline;
+  }
+  main .projects__resume__description__link {
+    display: flex;
+    align-items: start;
   }
 }
 footer {
