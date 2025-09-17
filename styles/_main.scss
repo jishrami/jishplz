@@ -83,6 +83,12 @@ main {
       font-weight: bold;
     }
   }
+
+  #whoami {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 768px) {

@@ -13,7 +13,8 @@ header {
     nav {
         display: flex;
         align-items: center;
-        flex-flow: row nowrap;
+        justify-content: center;
+        flex-flow: row wrap;
         border: 1px solid #91c7b1;
         border-radius: .75em;
         text-align: center;

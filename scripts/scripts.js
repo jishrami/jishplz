@@ -29,3 +29,12 @@ function copyDate() {
 }
 
 copyDate()
+
+
+const aboutMe = document.querySelector('#about');
+const aboutButton = document.querySelector('#about-link');
+
+aboutButton.addEventListener('click', () => {
+    aboutMe.scrollIntoView({ 
+        behavior: 'smooth' });
+});

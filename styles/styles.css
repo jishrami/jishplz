@@ -13,7 +13,8 @@ header {
 header nav {
   display: flex;
   align-items: center;
-  flex-flow: row nowrap;
+  justify-content: center;
+  flex-flow: row wrap;
   border: 1px solid #91c7b1;
   border-radius: 0.75em;
   text-align: center;
@@ -100,6 +101,11 @@ main .projects__resume__description__link {
 }
 main .projects__resume__description__link a {
   font-weight: bold;
+}
+main #whoami {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
